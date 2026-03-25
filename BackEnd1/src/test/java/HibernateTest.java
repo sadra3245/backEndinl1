@@ -79,6 +79,7 @@ public class HibernateTest {
         String authorName = "Långfil";
         String Genre = "Biography";
 
+        System.out.println("Påbörjar Uppgift 2");
 
         List<Author> authors1 = em.createNamedQuery("Author.findName", Author.class).setParameter("name", authorName).getResultList();
 
@@ -113,7 +114,6 @@ public class HibernateTest {
 
         System.out.println("klar!");
 
-        System.out.println("påbörjar uppgift 3: ");
 
         List<Reader> readerContain = em.createNamedQuery("Reader.CheckIfBooksExist", Reader.class).setParameter("bookTitle", pickBook).getResultList();
 
